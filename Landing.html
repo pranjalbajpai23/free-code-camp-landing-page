@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+ 
+    <header id="header">
+        <nav id="nav-bar" class=".navbar">
+          <div class="dropdown" id="user-wrapper">
+            <button class="dropbtn-second" onclick="myFunction_drop()" id="user">
+            </button>
+            <div class="dropdown-content" id="user-drop">
+              <a href="#form" class="nav-link"> Make Account</a>
+              <a href="#about-wrapper" class="nav-link">About</a>
+              <a href="#contribute" class="nav-link">Contribute</a>
+              <a href="#" class="nav-link">Login</a>
+            </div>
+            </div>
+            <div id="logo-wrapper"> 
+          <img id="header-img" src="Images/logo-e.png" alt="">
+        </div>
+            <div id="search-wrapper">
+              <input type="text" placeholder="Search.." name="search" id="search">
+              <button type="submit" id="search-btn"></button>
+            </div>
+          </div>
+        </nav>
+        <div id="poster">
+          <img src="Images/poster.png" alt="">
+        </div>      
+    </header>
+    <div id="about-wrapper">
+      <div id="me">
+      <img src="Images/me.jpg" alt="">
+     </div>
+     <div id="about-context">
+      <h1>About</h1>
+      <span id="about-text">
+        When I was in Graduation phase there were very limited sites and not sufficient guidance on Internet from where I could get the direct access to Study material (Pun intented).
+        hence We started this Organization with aim to provide the neccissary help to students of Graduations. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi suscipit officia voluptatum assumenda dolor! Perspiciatis, soluta. 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio itaque asperiores aut inventore, pariatur unde ullam repellendus cupiditate in accusantium ipsa quo quibusdam? <br>
+        <div id="by"> -Pranjal Bajpai</div>
+      </span>
+    </div> 
+  </div>
+
+    > 
+      <form action="https://www.freecodecamp.org/email-submit" id="form">
+      <h1 class="form-heading">Make Your Account Now!</h1>
+      <div id="form-text">
+              <label for="Name" class="form-lable"> <span> Name :</span>
+              <input type="text"  required placeholder="Your Name...">
+              </label>
+                <label for="contact" class="form-lable" type="tel" maxlength="11" minlength="10"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Enter Your number"><span>Contact Number :</span>
+                  <input type="text"  placeholder="Contact Number"
+                  minlength="10" maxlength="11" required>
+                </label>
+              <label for="Address" class="form-lable"> <span>Address :</span>
+              <input type="text"  required placeholder="Address"
+                  minlength="4" >  
+              </label>   
+              <label for="contact" id="email" class="form-lable"  pattern=".+@gmail\.com"> <span> E-mail i'd : </span>
+                <input type="text"  required placeholder="Email id here"
+                 maxlength="30">
+              </label>
+              <label for="best" id="best" class="form-lable"> <span> Course :</span>
+                <select name="dropdown" id="dropdown"  required>
+                    <optgroup>
+                    <option value="Defalut" class="op" disabled selected value required>Select A character</option>
+                    <option value="btech" class="op">B.Tech/option>
+                    <option value="ba" class="op">B.A/option>
+                    <option value="bsc" class="op">B.Sc</option>
+                    <option value="bca" class="op">B.C.A</option>
+                    <option value="law" class="op">Law</option>
+                    <option value="mbbs" class="op">M.B.B.S</option>
+                    </optgroup>
+                </select>
+                </label>
+                <label for="best" id="best" class="form-lable"> <span> Current Year :</span>
+                  <select name="dropdown" id="dropdown"  required>
+                      <optgroup>
+                      <option value="Defalut" class="op" disabled selected value required>Select A character</option>
+                      <option value="btech" class="op">1st Year</option>
+                        <option value="ba" class="op">2nd Year</option>
+                        <option value="bsc" class="op">3rd Year</option>
+                        <option value="bca" class="op">4rth Year</option>
+                        <option value="law" class="op">5th Year</option>
+          
+                      </optgroup>
+                  </select>
+                  </label>
+      </div>
+      <button id="submit">submit</button> 
+      </form>
+       
+      <div id="contribute">
+        <h1 id="contribute-heading">You can also Contribute by Joining Our Community!</h1>
+        <div id="tandc">
+      
+          <h4>Eligbility Criteria</h4>
+          <ul>
+            <li>Should be technically Sound.</li>
+            <li>Should be above 18</li>
+          </ul>
+          <hr>
+          <h4>Rules/Regulation</h4>
+          <ul>
+            <li>Show Respect and Professionalism in Community.</li>
+            <li>Always Post relevant content</li>
+            <li>Don't Spam</li>
+          </ul>
+          <hr>
+          <h4>What You will Get</h4>
+          <ul>
+            <li>Comunity Pass to access community permium content.</li>
+            <li>Chance to represent us.</li>
+            <li>Internship Opportunities</li>
+          </ul>
+        </div>
+         <h5><a href="#"> To join Community Just click Here</a></h5>
+      </div>
+      
+      <div id="video-wrap">
+        <h1>Check Out Our Youtube Channel</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/K8q0NrW_Fec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        function myFunction_drop() {
+          document.getElementById("user-drop").classList.toggle("show-drop");
+        }
+        
+        //Close the dropdown if the user clicks outside of it
+        window.onclick = function (w) {
+          if (!w.target.matches('.dropbtn-second')) {
+          var user_drop= document.getElementById("user-drop");
+          if (user_drop.classList.contains('show-drop')) {
+              user_drop.classList.remove('show-drop');
+            }        
+           }
+        }
+        
+
+
+  
+
+        </script>
+</body>
+
+</html>
